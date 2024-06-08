@@ -13,17 +13,14 @@ export default function Index() {
     >
       <Text>Edit app/index.tsx to edit this screen.</Text>
 
-      <Text></Text>
       <Link style={{
         color:"green",
         }} href="/details">View details</Link>
 
-      <Text></Text>
       <Link style={{
         color:"blue",
         }} href="/modal">Present modal</Link>
 
-      <Text></Text>
       <Link  style={{
         color:"red",
       }} href="/notFound">Page not found</Link>
