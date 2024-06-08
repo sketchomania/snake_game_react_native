@@ -12,16 +12,14 @@ export default function RootLayout() {
         fontWeight: 'bold',
       },
     }}>
-      <Stack.Screen 
-      // options={{
-      //   // Hide the header for all other routes.
-      //   headerShown: false,
-      // }}
+      <Stack.Screen
        name="index" />
-      <Stack.Screen options={{
+      <Stack.Screen 
+      options={{
         // Hide the header for all other routes.
         headerShown: false,
-      }} name="details" />
+      }} 
+      name="details" />
       <Stack.Screen
       name="modal"
       options={{
