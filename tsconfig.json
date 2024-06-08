@@ -12,5 +12,5 @@
     "**/*.ts",
     "**/*.tsx",
     ".expo/types/**/*.ts",
-    "expo-env.d.ts", "app/modal.js"  ]
+    "expo-env.d.ts", "app/modal.js", "app/index.js"  ]
 }
