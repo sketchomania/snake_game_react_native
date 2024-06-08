@@ -160,18 +160,24 @@ const getCell = useCallback(
       const isSnakeBody = snakeCoordinatesMap.current.has(coords);
       const isHead = headPos === coords;
 
-      let className = "cell";
+      let className = styles.grid;
       if (isFood) {
-          className += " food";
+        let food = StyleSheet.compose(className, styles.food)
+        className = food;
       }
       if (isSnakeBody) {
-          className += " body";
+        // className += " body";
+        let body = StyleSheet.compose(className, styles.body)
+        className = body;
       }
       if (isHead) {
-          className += " head";
+        // className += " head";
+        let body = StyleSheet.compose(className, styles.body)
+        className = body;
       }
 
-      return <Item key={col_idx} className={className}></Item>;
+      // return <Item key={coords} style={`${className}`} title={coords}></Item>;
+      return <Item key={coords} style={`${className}`} ></Item>;
   },
   [isPlaying]
 );
@@ -238,6 +244,7 @@ const getCell = useCallback(
     <View>
     <View>
       <Text >{isPlaying}</Text>
+      <Text >{grid.current}</Text>
       {gameOver ? (
           <Text className="game-over">GAME OVER</Text>
       ) : (
@@ -253,9 +260,10 @@ const getCell = useCallback(
     </View>
     <View style={styles.flexContainer}>
       {grid.current?.map((row, row_idx) => (
-        <Item key={row_idx} className="row" title={row_idx}  >
+        // <View key={row_idx} className="row" title={row_idx}  >
+        <View key={row_idx} className="row"  >
           {row.map((_, col_idx) => getCell(row_idx, col_idx))}
-        </Item>
+        </View>
       ))}
     </View>
     </View>
@@ -322,9 +330,36 @@ const styles = StyleSheet.create({
     borderRadius: 5,
 
     justifyContent: 'center',
-    width: 40,
-    height: 40,
+    width: 7,
+    height: 7,
     // marginVertical: 10,
     // marginHorizontal: 4,
+  },
+  // .cell {
+  //   width: 8px;
+  //   height: 8px;
+  //   display: flex;
+  //   justify-content: center;
+  //   align-items: center;
+  //   border: 1px dotted #161616;
+  // }
+  food: {
+    backgroundColor: '#00e244',
+    zIndex: 10,
+    borderColor: '#00e244',
+    // borderRadius: 50%,
+    borderRadius: 50,
+    boxShadow: '0px 0px 2px 2px #00e244',
+    animation: 'glowfood 1.5s linear infinite alternate',
+  },
+  head: {
+    backgroundColor: '#00eeee',
+    zIndex: 12,
+    borderColor: '#00eeee',
+    borderRadius: 50,
+  },
+  body: {
+    backgroundColor: '#3842ff',
+    borderColor: '#3842ff',
   },
 });
