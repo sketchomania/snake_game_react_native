@@ -2,14 +2,11 @@ import { StyleSheet, Text } from "react-native"
 import { Coordinate } from "../types/types"
 
 
-function getRandomFruit() {
-    const fruits = [ "🍇","🍈","🍉","🍊","🍏","🍎","🍍","🍑","🍒","🍓","🥝","🍅","🥑","🥧"]
-    const randomIndex = Math.floor(Math.random() * fruits.length)
-    return fruits[randomIndex]
-}
+const fruits = [ "🍇","🍈","🍉","🍊","🍏","🍎","🍍","🍑","🍒","🍓","🥝","🍅","🥑","🥧"]
+const randomIndex = Math.floor(Math.random() * fruits.length)
 
 export default function Food({x, y}: Coordinate):JSX.Element {
-    return <Text style={[{top: y * 10, left: x * 10}, styles.food]}>🍒</Text>
+    return <Text style={[{top: y * 10, left: x * 10}, styles.food]}>{fruits[randomIndex]}</Text>
 }
 
 const styles = StyleSheet.create({
