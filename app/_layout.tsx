@@ -16,12 +16,6 @@ export default function RootLayout() {
     }}>
       <Stack.Screen
        name="index" />
-      <Stack.Screen 
-      options={{
-        // Hide the header for all other routes.
-        headerShown: false,
-      }} 
-      name="details" />
     </Stack>
   );
 }
