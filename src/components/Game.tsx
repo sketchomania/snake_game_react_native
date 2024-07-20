@@ -125,6 +125,7 @@ export default function Game():JSX.Element {
                     >{score}</Text>
                 </Header>
                 <View style={styles.boundaries}>
+                    { isGameOver && <Text style={styles.gameOver}>{"Game Over"}</Text>}
                     <Snake snake={snake}/>
                     <Food x={food.x} y={food.y} />
                 </View>
@@ -149,5 +150,11 @@ const styles = StyleSheet.create({
         borderBottomLeftRadius: 30,
         borderBottomRightRadius: 30,
         backgroundColor: Colors.background, 
-    }
+    },
+    gameOver: {
+        color: "#FF0000",
+        fontWeight: "bold",
+        fontSize: 40,
+        textAlign: "center",  
+    },
 })
