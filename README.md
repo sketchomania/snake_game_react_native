@@ -1,50 +1,80 @@
-# Welcome to your Expo app 👋
+# Snake Game React Native Expo
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+A snake game made with [React Native](https://reactnative.dev/), [Typescript](https://www.typescriptlang.org/) and React Native Gestures.
 
-## Get started
+[](https://giphy.com/gifs/oaqiOae89XJ5WYJcbE)
 
-1. Install dependencies
+<img  src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExMmtxd2UyaWV1dmQ2MzJtczBtMXpudHQ3cXgwZGZ4cmE5NjR2b2lncCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/oaqiOae89XJ5WYJcbE/giphy.gif" width="300" >
 
-   ```bash
-   npm install
-   ```
+## :star: Features
 
-2. Start the app
+- Bare React Native Expo App
+- React Native Typescript Template
+- Play, Pause and Rset game
+- Length of snake increase when eat food
+- Game over if touched the boundary
+- Scrore increase when eat food
+- get new food each time app loads
 
-   ```bash
-    npx expo start
-   ```
+## ⚒️ Tech stack
 
-In the output, you'll find options to open the app in a
+- [React Native](https://reactnative.dev/)
+- [Typescript](https://www.typescriptlang.org/)
+  - [help](https://react-typescript-cheatsheet.netlify.app/)
+- React Native Gestures
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+## :star: Get Started
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+### React Native Setup
 
-## Get a fresh project
+make sure to have setup development environment
 
-When you're ready, run:
+[📍 Setting up the development environment](https://reactnative.dev/docs/environment-setup)
 
 ```bash
-npm run reset-project
+# clone
+git clone https://github.com/sketchomania/snake_game_react_native.git
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+```bash
+# install dependencies
+npm install
 
-## Learn more
+# Or use `yarn`
+yarn install
+```
 
-To learn more about developing your project with Expo, look at the following resources:
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+Run project
 
-## Join the community
+```bash
+# run project
+npx expo start
+```
 
-Join our community of developers creating universal apps.
+### Screenshot
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+<div style="display: flex; margin: 1rem; justify-content: space-around; flex-wrap: wrap">
+ <img src="src/assets/snake-1.jpg" alt="game screen"  width="200">
+ <img src="src/assets/snake-5.jpg" alt="game screen"  width="200">
+ <img src="src/assets/snake-4.jpg" alt="game screen"  width="200">
+</div>
+<div style="display: flex; margin: 1rem; justify-content: space-around; flex-wrap: wrap">
+ <img src="src/assets/snake-2.jpg" alt="game screen"  width="200">
+ <img src="src/assets/snake-6.jpg" alt="game screen"  width="200">
+ <img src="src/assets/snake-3.jpg" alt="game screen"  width="200">
+</div>
+
+## 🚀 Contribute
+
+Contributions are most welcome in this project be it reporting an issue or sending a pull request.
+
+Some of the things you could help with currently are -
+
+1. Improvements
+   - make visible bounday collaps more accurate
+
+2. Adding features
+   - You can add useThemes()
+   - Show animation of game over
+   - Snake face can be added
